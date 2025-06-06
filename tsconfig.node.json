@@ -1,0 +1,26 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "include": [
+    "electron.vite.config.*",
+    "src/main/**/*",
+    "src/preload/*",
+    "src/shared/**/*",
+    "src/main/shards/game-client"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "composite": true,
+    "types": ["electron-vite/node", "@modyfi/vite-plugin-yaml/modules"],
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@main/*": ["src/main/*"]
+    },
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}

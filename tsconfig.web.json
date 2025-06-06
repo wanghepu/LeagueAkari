@@ -1,0 +1,42 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/renderer/env.d.ts",
+    "src/renderer/src-main-window/**/*",
+    "src/renderer/src-main-window/**/*.vue",
+    "src/renderer/src-aux-window/**/*",
+    "src/renderer/src-aux-window/**/*.vue",
+    "src/renderer/src-opgg-window/**/*",
+    "src/renderer/src-opgg-window/**/*.vue",
+    "src/renderer/src-ongoing-game-window/**/*",
+    "src/renderer/src-ongoing-game-window/**/*.vue",
+    "src/renderer/src-cd-timer-window/**/*",
+    "src/renderer/src-cd-timer-window/**/*.vue",
+    "src/preload/*.d.ts",
+    "src/shared/**/*",
+    "src/renderer-shared/**/*",
+    "examples/legacy/ongoing-game-utils.ts",
+    "examples/legacy/PlayerInfoCard.vue",
+    "examples/legacy/OngoingGame1.vue"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "composite": true,
+    "baseUrl": ".",
+    "types": ["@modyfi/vite-plugin-yaml/modules"],
+    "paths": {
+      "@main-window/*": ["src/renderer/src-main-window/*"],
+      "@aux-window/*": ["src/renderer/src-aux-window/*"],
+      "@opgg-window/*": ["src/renderer/src-opgg-window/*"],
+      "@ongoing-game-window/*": ["src/renderer/src-ongoing-game-window/*"],
+      "@cd-timer-window/*": ["src/renderer/src-cd-timer-window/*"],
+      "@shared/*": ["src/shared/*"],
+      "@renderer-shared/*": ["src/renderer-shared/*"]
+    },
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}

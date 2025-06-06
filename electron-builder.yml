@@ -1,0 +1,35 @@
+appId: sugar.cocoa.league-akari
+productName: League Akari
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md,README-en.md,FAQ.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml,yarn.lock}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!examples'
+  - '!docs'
+  - '!images'
+  - '!pictures'
+  - '!akari-updater'
+
+asarUnpack:
+  - resources/**
+win:
+  target:
+    - 7z
+  executableName: LeagueAkari
+  icon: resources/LA_ICON.ico
+nsis:
+  oneClick: false
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+
+npmRebuild: false
+publish:
+#   provider: generic
+#   url: https://league-akari.cocoa.sugar/releases

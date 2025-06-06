@@ -1,0 +1,2376 @@
+SettingModal:
+  title: Settings
+
+AnnouncementModal:
+  title: Announcement
+  close: Close
+  read: I have read
+
+DeclarationModal:
+  title: Declaration
+  close: Close
+  ok: Got it
+  showAgain: Show again
+  line1: (联盟阿卡林) is open-source software designed to provide additional auxiliary features. You should not obtain this software through any paid channels.
+  line2: Please be aware that this software takes no responsibility for any consequences that may arise from its use, including but not limited to game account bans, data corruption, or any other negative impact on your gaming experience.
+  line3: League Akari no longer supports Tencent servers. Please do not use it on Tencent servers. Using this software may violate the relevant rules of Tencent games, and you will be responsible for any possible consequences.
+
+CommonButtons:
+  announcement: Announcement
+  github: Project GitHub
+  auxWindow: Auxiliary Window
+  opggWindow: OP.GG
+  backgroundTasks: Background Tasks
+
+TrafficButtons:
+  minimize: Minimize
+  maximize: Maximize
+  restore: Restore
+  close: Close
+
+  modal:
+    title: Quit League Akari
+    options:
+      minimize-to-tray: Minimize to tray
+      quit: Quit
+    remember: Remember
+    ok: OK
+    cancel: Cancel
+
+OngoingGameTitle:
+  refresh: Refresh
+  spectating: Spectating
+  orderOptions:
+    default: Default
+    position: Position
+    premade-team: Premade Team
+    win-rate: W/R Desc
+    kda: KDA Desc
+    akari-score: Score Desc
+
+AppSettings:
+  title: Application
+
+  basic:
+    title: Basic
+
+    mainWindowCloseAction:
+      label: Main Window Close Action
+      description: The action to be executed when the main window is closed
+      options:
+        minimize-to-tray: Minimize to tray
+        quit: Quit
+        ask: Ask every time
+
+    backgroundMaterial:
+      label: Background Material
+      description: Set the background material of the application interface, requires specific system version support
+      options:
+        none: Default
+        mica: Mica
+
+    logLevel:
+      label: Log Level
+      description: Set the log level of the application
+
+  selfUpdate:
+    title: Application Update
+    tip:
+      title: How to choose?
+      gitee: '- Better response speed in mainland China'
+      github: '- Better response speed outside mainland China'
+
+    autoCheckUpdates:
+      label: Auto Check Updates
+      description: Automatically pull the latest version information from the update source when the application starts
+
+    autoDownloadUpdates:
+      label: Auto Download Updates
+      description: Automatically download the update package when a new version is detected
+
+    downloadSource:
+      label: Download Source
+      description: Choose the update package download source
+
+    checkFrom: Check updates from download source ({{source}})
+    checkUpdates: Check Updates
+    currentRelease: Current Release
+    downloadRelease: Download Release
+    newRelease: New Release
+    lastCheckAt: Last Check at
+    cancelUpdate: Cancel Update
+
+    updateProgress:
+      label: Update Process
+      description: The ongoing update process
+      downloading: Downloading update package
+      finished: Completed {{progress}}%
+      remain: Remaining {{time}}
+      downloadFailed: Download failed
+      unpacking: Unpacking update package
+      unpackFailed: Unpack failed
+      waitingForRestart: Waiting for restart
+      waitingForRestartDescription: The auto-update process will be performed after closing the application
+
+    checkUpdatesResult:
+      no-updates: No new version available
+      new-updates: New version available
+      failed: Failed to check for updates {{reason}}
+
+    updateDir:
+      label: Update Directory
+      description: The current location of the downloaded update. If the complete auto-update process cannot be executed, manual update is required
+      open: Open
+
+  mainWindowUi:
+    title: Main Window UI
+    useProfileSkinAsBackground:
+      label: Use Profile Skin as Background
+      description: League Akari will use the current player's profile background skin as the background. If the background texture is set, this option will not take effect
+
+  lcConnection:
+    title: LCU Connection
+
+    autoConnect:
+      label: Auto Connect
+      description: Automatically connect to the client when there is a unique client
+
+    useWmic:
+      label: Use WMIC
+      description: Use WMIC to get client command line information instead of the default Win32 API method. Requires administrator privileges
+
+    rebuildWmi:
+      label: Rebuild WMI
+      description: If WMIC does not work properly, try this
+      rebuildButton: Rebuild WMI
+
+  misc:
+    title: Misc
+
+    disableHardwareAcceleration:
+      label: Disable Hardware Acceleration
+      description: Disables hardware acceleration, which may solve some rendering issues, such as font blur
+
+    disableHardwareAccelerationDialog:
+      enableText: Enable Hardware Acceleration
+      disableText: Disable Hardware Acceleration
+      disableConfirmation: Will disable hardware acceleration, restart the application to apply changes
+      enableConfirmation: Will enable hardware acceleration, restart the application to apply changes
+      positiveText: Restart and Quit
+      negativeText: Cancel
+
+    httpProxy:
+      strategy:
+        label: HTTP Proxy
+        description: Set the HTTP proxy. All network requests except LCU HTTP will be routed through this proxy
+        options:
+          force: Use Proxy
+          auto: Auto
+          disable: Disable
+      host:
+        label: Proxy Host
+        description: The host of the proxy server
+      port:
+        label: Proxy Port
+        description: The port of the proxy server
+
+MatchHistorySettings:
+  title: Match History Tabs
+
+  refreshTabsAfterGameEnds:
+    label: Refresh Tabs After Game Ends
+    description: Automatically refresh the match history tabs after the game ends. Due to the latency of the remote server, the refresh may not be on time
+
+  matchHistoryUseSgpApi:
+    label: Use SGP API
+    description: Use SGP API as the data source for the match history page
+    current: 'Current SGP Server: {{server}}'
+    unsupported: 'Unsupported SGP API: {{server}}'
+
+OngoingGameSettings:
+  title: Ongoing Game
+  titleCommon: Ongoing Game
+  titlePlayerCard: Player Card
+
+  enabled:
+    label: Enable
+    description: Perform match analysis when entering champion selection or during a match.
+
+  autoRouteWhenGameStarts:
+    label: Auto Route to Ongoing-Game
+    description: Automatically switch to the ongoing-game page when entering the champion selection phase or when the game starts.
+
+  matchHistoryLoadCount:
+    label: Match History Load Count
+    description: Number of matches to fetch for analyzing each player's performance on the match page.
+
+  premadeTeamThreshold:
+    label: Premade Team Detection Threshold
+    description: A group of players will be considered a premade team if they appear on the same side more than {{threshold}} times.
+
+  concurrency:
+    label: Concurrent Request Limit
+    description: Limits the total number of concurrent network requests during match analysis. This does not affect the concurrency limits of other modules.
+
+  matchHistoryUseSgpApi:
+    label: Use SGP API
+    description: Prioritizes using the SGP API for match analysis. If the SGP API is unavailable, the LCU API will be used instead.
+    unsupported: 'SGP API is not supported for the current server: {{server}}'
+
+  matchHistoryTagPreference:
+    label: Queue Filter Preference
+    description: Queue filter preference when loading match history using the SGP API.
+    options:
+      all: All Modes
+      current: Current Mode
+
+  gameTimelineLoadCount:
+    label: Game Timeline Load Count
+    description: Will additionally load the timeline information for the first {{countV}} matches for game analysis.
+
+  showRecentlyUsedChampions:
+    label: Show Recently Used Champions
+    description: Display the recently used champions in the player card.
+
+  showChampionUsage:
+    label: Show Champion Usage
+    description: Display the champion usage on the player card.
+    options:
+      none: None
+      recent: Recently Used
+      mastery: Mastery Level
+
+  showMatchHistoryItemBorder:
+    label: Show Match History Item Border
+    description: Display a border around the match history item.
+
+  playerCardTags:
+    label: Player Card Tags
+    description: These tags will be displayed on the player cards
+
+    tags:
+      showPremadeTeamTag:
+        label: Premade Team Text
+      showWinningStreakTag:
+        label: Winning Streak
+      showLosingStreakTag:
+        label: Losing Streak
+      showSoloKillsTag:
+        label: Average Solo Kills Per Game (Last {{countV}} games)
+      showSoloDeathsTag:
+        label: Average Solo Deaths Per Game (Last {{countV}} games)
+      showAverageTeamDamageTag:
+        label: Average Team Damage
+      showAverageTeamDamageTakenTag:
+        label: Average Team Damage Taken
+      showSuspiciousFlashPositionTag:
+        label: Flash Position Anomaly Detection
+      showAverageTeamGoldTag:
+        label: Average Team Gold
+      showGreatPerformanceTag:
+        label: Outstanding Performance Tag
+      showMetTag:
+        label: Previously Encountered Players
+      showTaggedTag:
+        label: Tagged Players
+      showSelfTag:
+        label: Self Tag
+      showWinRateTeamTag:
+        label: High Win Rate Tag
+      showAverageDamageGoldEfficiencyTag:
+        label: Damage-Gold Efficiency Tag
+      showPrivacyTag:
+        label: Career Hidden Tag
+      showAverageEnemyMissingPingsTag:
+        label: Average Enemy Missing Pings
+      showAverageVisionScoreTag:
+        label: Average Vision Score
+      showAkariScoreTag:
+        label: Akari Score
+
+MultiWindowSettings:
+  title: Multi-Window
+
+  auxWindow:
+    title: Auxiliary Window
+
+    enabled:
+      label: Enable Auxiliary Window
+      description: Use a small window during certain game phases to display status and provide additional actions.
+      descriptionPart1: Can be opened by clicking the quick icon on the right side of the title bar (
+      descriptionPart2: ) or by right-clicking the tray icon and selecting "Aux Window").
+
+    autoShow:
+      label: Auto Show and Close
+      description: Automatically show or close the auxiliary window during specific game phases.
+
+    opacity:
+      label: Window Opacity
+      description: Adjust the transparency level of the auxiliary window.
+
+    showSkinSelector:
+      label: Skin Selector
+      description: Display a quick access skin selection tool in the auxiliary window.
+
+    resetWindowPosition:
+      label: Reset Window Position
+      description: Reset the position of the auxiliary window to its default location in the center of the main screen.
+      button: Reset
+
+  opggWindow:
+    title: OP.GG Window
+
+    enabled:
+      label: Enable OP.GG Features
+      description: Use the OP.GG window to view detailed player information and match history
+      descriptionPart1: Can be opened by clicking the quick icon on the right side of the title bar (
+      descriptionPart2: ) or by right-clicking the tray icon and selecting "OP.GG Window").
+
+    autoShow:
+      label: Auto Show and Close
+      description: Automatically show or close the OP.GG window during specific game phases.
+
+    opacity:
+      label: Window Opacity
+      description: Adjust the transparency level of the OP.GG window.
+
+    resetWindowPosition:
+      label: Reset Window Position
+      description: Reset the position of the OP.GG window to its default location in the center of the main screen.
+      button: Reset
+
+    showShortcut:
+      label: Show Shortcut
+      description: Use the shortcut key to show or hide the OP.GG window. If the game is in the foreground, it will automatically get pinned. Make sure the game is in borderless or windowed mode for this window to display correctly.
+
+  ongoingGameWindow:
+    title: Ongoing Game Overlay Window
+    titleRequireAdmin: Ongoing Game Overlay Window (Admin Required)
+
+    enabled:
+      label: Enable Ongoing Game Window
+      description: Display an overlay window during the game to show ongoing game information. This feature requires the game client to be in windowed or borderless mode.
+
+    showShortcut:
+      label: Show Shortcut
+      description: Hold the shortcut key to show the overlay window during the game
+
+  cdTimerWindow:
+    title: Timer Overlay Window
+    titleRequireAdmin: Timer Overlay Window (Admin Required)
+
+    description:
+      lineA: Marking the enemy champion summoner spell timer is only available when the current game mode is supported
+      leftClick1: · Left Click
+      leftClick2: ' - Start or stop this timer'
+      rightDoubleClick1: · Right Double Click
+      rightDoubleClick2: ' - If this timer is a started champion spell timer, simulate input sent to the in-game chat'
+      wheel1: · Wheel
+      wheel2: ' - Adjust the time of the started timer'
+
+    enabled:
+      label: Enable Timer Window
+      description: Display an overlay window during the game to show timers. This feature requires the game client to be in windowed or borderless mode.
+
+    showShortcut:
+      label: Show Shortcut
+      description: Use the shortcut key to show or hide the overlay window
+
+    timerType:
+      label: Timer Type
+      description: Select the type of timer. The countdown mode will use the preset summoner spell time (has errors), while the count-up mode will start from 0. Note that the custom timers are always in countup mode.
+      options:
+        countdown: Countdown Mode
+        countup: Count-Up Mode
+
+MiscSettings:
+  title: Misc
+
+  respawnTimer:
+    title: Respawn Timer
+
+    enabled:
+      label: Enable
+      description: Display an indicator in the side bar showing the remaining time until respawn.
+
+  streamerMode:
+    title: Streamer Mode
+
+    enabled:
+      label: Enable
+      description: Hide sensitive information, such as the player's name, in the application interface.
+
+    useAkariStyledName:
+      label: Use Akari-Styled Name
+      description: Use the Akari-styled names in summoner placeholder.
+
+DebugSettings:
+  title: Debug
+
+  electron:
+    title: Akari's Electron
+
+    devTools:
+      label: Developer Tools
+      description: Toggle DevTools
+      button: Toggle DevTools
+
+    reload:
+      label: Reload Page
+      description: Refresh the League Akari user interface.
+      button: Reload Page
+
+  files:
+    title: File Directories
+
+    logs:
+      label: Logs Directory
+      description: Open the logs directory.
+      button: Logs Directory
+
+    appData:
+      label: Application Data Directory
+      popoverTrigger: Details
+      button: Open Directory
+      description:
+        part1: Open the League Akari application data storage directory. This directory is created when the application is first launched. Deleting it will result in the loss of all stored content.
+        part2: Contains user settings, marked players, and other information.
+        part3: Temporary files for upcoming automatic updates.
+        part4: Configurable setting files.
+        part5: Special configuration files.
+
+  lcuEvent:
+    label: Print LCU Events to Console
+    printAll: Print All Events
+    logAll: Log All Events Into File
+    addRule: Add Rule
+    empty: No Rules
+    enable: Enable
+    rule: Rule
+    delete: Delete
+
+    modal:
+      title: Add Rule
+      button: Add
+      placeholder: Enter a matching rule, such as /path/:name/to
+
+  lcuConnection:
+    titleConnected: LCU
+    titleDisconnected: LCU (Disconnected)
+    port: Port
+    pid: Process ID
+    auth: Auth Key
+    rsoPlatform: Platform
+    region: Region
+
+  gameflow:
+    title: Gameflow
+    unavailable: Unavailable (Disconnected)
+
+    Matchmaking: 'Matchmaking'
+    ChampSelect: 'In Champion Select'
+    ReadyCheck: 'In Ready Check'
+    InProgress: 'Game In Progress'
+    EndOfGame: 'Game End'
+    Lobby: 'Lobby'
+    GameStart: 'Game Start'
+    None: 'None'
+    Reconnect: 'Reconnecting'
+    WaitingForStats: 'Waiting for Stats'
+    PreEndOfGame: 'Before Game End'
+    WatchInProgress: 'Spectating'
+    TerminatedInError: 'Terminated in Error'
+
+  inAdministrator:
+    description: League Akari is currently running with administrator privileges. Now, it is League Akari X.
+
+  kyokoMode:
+    label: Kyoko Mode
+    description: Enabled features that are deprecated or experimental. Use with caution.
+
+StorageSettings:
+  title: Storage
+  tabs:
+    settings: Settings
+    tagged-players: Tagged Players
+
+SavedSettings:
+  title: Settings
+  export:
+    label: Export Settings
+    description: Export the current application settings to a JSON file
+    button: Export
+
+  import:
+    label: Import Settings
+    description: Import settings from a JSON file
+    dialogWarning: Importing settings will overwrite the current settings and restart the application. Continue?
+    dialogPositiveText: Import
+    dialogNegativeText: Cancel
+    button: Import
+
+  errorCode:
+    InvalidSettingsFile: Invalid settings file
+    InvalidDatabaseVersion: The target version of the settings file is not supported
+    importDefault: 'Failed to import settings: {{reason}}'
+
+  exported: 'Settings exported: {{path}}'
+  errorExport: 'Failed to export settings: {{reason}}'
+
+TaggedPlayers:
+  editModal:
+    title: Edit Tagged Player
+    inputPlaceholder: Edit this tag
+
+  columns:
+    tagger: Tagger
+    tagged: Tagged
+    tag: Tag
+    sgpServer: Server
+
+  refreshButton: Refresh
+  onlyCurrentAccountCheckbox: Only Current Account
+  na: (Unavailable) {{truncatedPuuid}}...
+  player: 'Player: {{puuid}}'
+  empty: (Empty)
+  naPopoverContent: Unable to retrieve information for this summoner due to the server being unavailable or not loaded
+
+  saveButton: Save
+  cancelButton: Cancel
+  editButton: Edit
+  deleteButton: Delete
+  importButton: Import
+  exportButton: Export
+
+  streamerModeWarning: Some sensitive information will be exposed
+  showButton: Show
+
+  deletePopconfirmContent: Confirm deletion? This operation cannot be undone
+  updated: Updated
+  updateFailed: Update failed {{reason}}
+
+  errorCode:
+    InvalidTaggedPlayersFile: Invalid file
+    InvalidDatabaseVersion: The target version of the file is not supported
+    importDefault: 'Failed to import tagged players: {{reason}}'
+
+  exported: 'Exported tagged players: {{path}}'
+  imported: 'Imported tagged players: {{path}}'
+  errorExport: 'Failed to export tagged players: {{reason}}'
+
+AboutPane:
+  title: About
+  line1: ' (联盟阿卡林, Version {{version}}) is an open-source software that focuses on providing some additional features to assist the game experience of League of Legends, almost all of its implementations rely on'
+  line2: Project Reference
+  copyright: © 2025 Hanxven. This software is open-source and follows the GPL-3.0 license.
+
+Automation:
+  title: Automation
+  autoGameflow: Automated Gameflow
+  autoSelect: Auto Pick / Ban
+  autoMisc: Misc
+  autoChampConfig: Auto Configuration
+
+AutoGameflow:
+  title: Gameflow
+
+  autoAcceptEnabled:
+    label: Auto-Accept Enabled
+    description: Automatically accepts the match when players are found.
+  autoAcceptDelaySeconds:
+    label: Auto-Accept Delay (s)
+    description: Delay in seconds before accepting the match after it becomes available.
+  autoHonorEnabled:
+    label: Auto-Honor Enabled
+    description: Automatically gives honors at the end of a match. External tools cannot skip the honor phase, so all votes will be used to complete the phase.
+  autoHonorStrategy:
+    label: Honor Selection Strategy
+    description: Determines which players will receive honors.
+    options:
+      prefer-lobby-member: Prioritize members in the lobby. If there are remaining votes, select other teammates.
+      only-lobby-member: Only pre-made team members.
+      all-member: All teammates.
+      all-member-including-opponent: Consider all players in the current match.
+      opt-out: Do not honor anyone.
+  playAgainEnabled:
+    label: Auto Play Again
+    description:
+      part1: Automatically returns to the lobby after a match.
+      part2: Auto-Honor
+      part3: to complete the honor voting phase.
+  autoMatchmakingEnabled:
+    label: Auto Matchmaking
+    description: Automatically starts matchmaking when available.
+  autoMatchmakingMinimumMembers:
+    label: Minimum Members
+    description: Requires at least {{members}} members to start matchmaking automatically.
+  autoMatchmakingDelaySeconds:
+    label: Matchmaking Wait Time (s)
+    description: Delay in seconds before starting matchmaking when available.
+  autoMatchmakingWaitForInvitees:
+    label: Wait for Invitees
+    description: Automatically waits for all invited players to respond before starting matchmaking.
+  autoMatchmakingRematchStrategy:
+    label: Stop Matchmaking Strategy
+    description: Defines when to stop matchmaking automatically. Matchmaking will restart if auto matchmaking is enabled.
+    options:
+      never: Never
+      fixed-duration: Fixed Duration
+      estimated-duration: Exceeds Estimated Queue Time
+  autoMatchmakingRematchFixedDuration:
+    label: Exit Matchmaking Time (s)
+    description:
+      fixed-duration: Stops matchmaking after exceeding this time, in seconds.
+      no-fixed-duration: This option only applies if the stop matchmaking strategy is set to Fixed Duration.
+  autoReconnectEnabled:
+    label: Auto Reconnect
+    description: Attempts to reconnect when in a reconnectable state.
+  autoSkipLeaderEnabled:
+    label: Auto Skip Leader
+    description: When you are the lobby leader, transfer the leadership to other members in the lobby
+  autoHandleInvitationsEnabled:
+    label: Auto Handle Invitations
+    description: Handles room invitations according to the configured strategy.
+  invitationHandlingStrategies:
+    label: Room Invitation Acceptance Strategy
+    description: Processes room invitations based on the queue mode.
+    options:
+      accept: Accept
+      decline: Decline
+      ignore: Ignore
+    button: Configure
+    queueTypes:
+      default: Default
+  rejectInvitationWhenAway:
+    label: Reject When Away
+    description: Automatically rejects lobby invitations when the game status is set to Away.
+
+AutoSelect:
+  normalModeTitle: Auto Pick · Normal Mode
+  benchModeTitle: Auto Pick · Bench Mode
+  banTitle: Auto Ban
+
+  normalModeEnabled:
+    label: Enable
+    description: Enable auto pick in standard modes, such as Matchmaking, Ranked, or any non-random champion modes.
+
+  showIntent:
+    label: Show Intent
+    description: Preselect the champion that will be automatically chosen.
+
+  selectTeammateIntendedChampion:
+    label: Ignore Teammates' Intent
+    description: When enabled, teammates' intended champions will be ignored. Otherwise, it will avoid conflicts with their selections.
+
+  pickStrategy:
+    label: Lock-In Strategy
+    description: Instantly lock in or just show the champion.
+    options:
+      lock-in: Instantly Lock In
+      show: Just Show
+      show-and-delay-lock-in: Show and Delay Lock In
+
+  lockInDelaySeconds:
+    label: Auto Lock-In Delay (s)
+    description: The delay time (in seconds) to perform the lock-in action after revealing the champion. It will not exceed the maximum duration of the phase.
+
+  expectedChampions:
+    label: Intended Champions
+    button: Configure
+    description: |
+      <div style="margin-bottom: 8px">Select champions based on the preset list.</div>
+      <div style="margin-bottom: 8px">If the current mode <span style="font-weight: bold">has no role information</span> or <span style="font-weight: bold">the current role has no champions set</span>, the <span style="font-weight: bold">default</span> list will be used.</div>
+      <div>The selection priority follows the order defined in the list, preferring champions listed earlier.</div>
+
+  benchModeEnabled:
+    label: Enable
+    description: Enable auto selection in random champion modes, such as ARAM or other random modes.
+
+  grabDelaySeconds:
+    label: Minimum Selection Delay (s)
+    description:
+      part1: The cumulative time a target champion is available on the selection bench must reach this value before executing a swap. Time is measured in seconds.
+      part2: When a champion appears on the selection bench, a timer starts for that champion. Auto-swap will only occur if the cumulative time satisfies this value, preventing premature selection, also known as "insta-picking."
+
+  benchSelectFirstAvailableChampion:
+    label: Prioritize First Available Champion
+    description: When enabled, the first available champion from the intended list will always be selected.
+
+  benchHandleTradeEnabled:
+    label: Auto Handle Trade Requests
+    description: |
+      <div>When enabled, upcoming champion trade requests will be managed automatically.</div>
+      <div>If "Prioritize First Available Champion" is enabled, trade for a higher-priority preferred champion will be accepted.</div>
+      <div>If "Prioritize First Available Champion" is not enabled and no expected champions are held, trade for a preferred champion will be accepted.</div>
+      <div>If "Prioritize First Available Champion" is enabled and expected champions are held, trade will be ignored.</div>
+
+  benchHandleTradeIgnoreChampionOwner:
+    label: Ignore Champion Owner
+    description: |
+      <div>When handling champion trade requests, the champion's owner will be considered</div>
+      <div>If the other party is the owner of the champion, the trade request will not be taken over</div>
+      <div style="font-weight:bold">Note: Cannot handle scenarios where champion select is joined midway</div>
+
+  benchExpectedChampions:
+    label: Intended Champions
+
+  banEnabled:
+    label: Enable
+    description: Automatically execute champion bans.
+
+  banDelaySeconds:
+    label: Auto Ban Delay (s)
+    description: The delay time (in seconds) to perform the ban action. It will not exceed the maximum duration of the phase.
+
+  banTeammateIntendedChampion:
+    label: Ignore Teammates' Intent
+    description: When enabled, teammates' intended champions will not be considered.
+
+  bannedChampions:
+    label: Banned Champions
+    description: |
+      <div style="margin-bottom: 8px">Ban champions based on the preset list.</div>
+      <div style="margin-bottom: 8px">If the current mode <span style="font-weight: bold">has no role information</span> or <span style="font-weight: bold">the current role has no champions set</span>, the <span style="font-weight: bold">default</span> list will be used.</div>
+      <div>The ban priority follows the order defined in the list, prioritizing champions listed earlier.</div>
+
+AutoMisc:
+  autoReply:
+    updated: Updated
+    title: Auto Reply
+
+    enabled:
+      label: Enable
+
+    enableOnAway:
+      label: Only When Away
+      description: Auto-reply will only be active when the game status is set to Away.
+
+    text:
+      label: Reply Text
+      description: The content to be used as the auto-reply message.
+
+SideBarMenu:
+  match-history: Match History Tabs
+  ongoing-game: Ongoing Game
+  automation: Automation
+  toolkit: Toolkit
+  test: Test
+
+SideBarFixed:
+  currentConnected: Connected
+  launchedClients: Launched Clients
+  noClientTitle: No Available Client
+  noClient: No available client, please start the game
+  settings: Settings
+  connectedClient: Connected Client
+  launchedClientPlaceholder: Launched Client {{index}}
+
+  respawnTimer:
+    timeLeft: Respawn in {{seconds}} s
+
+OrderedChampionList:
+  searchForChampion: Search for Champion
+  edit: Edit
+  unselected: Unselected
+
+RankedTable:
+  queueType: Queue Type
+  tier: Tier
+  leaguePoints: LP
+  ratedRating: Rating
+  wins: Wins
+  losses: Losses
+  previousSeasonEndTier: Previous Season Tier
+  previousSeasonHighestTier: Previous Season Highest Tier
+  highestTier: Highest Tier
+
+RankedDisplay:
+  unranked: Unranked
+  win: W
+  lose: L
+  point: P
+  leaguePoint: LP
+  highest: Highest
+  empty: No Content
+
+DamageMetricsBar:
+  total: Total
+  physical: Physical
+  magic: Magic
+  true: 'True'
+
+SpectateStatus:
+  button: Spectate
+  bans: Bans
+  startFrom: Started from {{date}} ({{relativeTime}})
+
+  lcuSpectate:
+    label: Using LCU API (Optional)
+    description: Use the LCU API to start spectating on the same server instead of using a process call.
+    descriptionNotIdle: Spectating using the LCU API requires being in an idle state. You are not currently idle. Please leave the lobby first.
+    button: Spectate
+
+  tokenSpectate:
+    label: Copy Token
+    description: Can be used to start the spectate process in another instance of League Akari.
+    button: Copy
+    copied: Spectate token copied
+    copyFailed: Failed to copy spectate token
+
+MatchHistoryTabsTitle:
+  loading: Loading...
+  search: Search
+  refresh: Refresh
+  close: Close
+  closeOthers: Close Others
+  closeToTheRight: Close to the Right
+  screenshot: Screenshot Tab
+  searchButtonStreamerModeWarning: Searching for players will expose sensitive information, continue?
+
+SearchSummonerModal:
+  title: Summoner Search
+  placeholder: Enter the summoner name
+  sgpServer: Server
+  cancel: Cancel
+  search: Search Player
+  result: Search Results
+  history: Recent Visit
+  validating: Validating players ({{current}} / {{total}})
+  validated: Validated {{countV}} possible player records, no matching results found
+  noResult: No matching results found
+  privacy: Private
+  currentRoute: Current
+  invalidInput: 'The input format is invalid: it should be "GameName#Tag" or "GameName"'
+  hasInvisibleChar: The search text contains invisible characters, which will be filtered out
+  puuidSearch: 'Performing exact search: Searching by specified PUUID'
+  exactSearch: 'Performing exact search: Searching for summoner with specified name and tag'
+  fuzzySearch: 'Performing fuzzy search: Searching for summoners with specified name'
+
+  placeholders:
+    - 'For exact search: AkazaAkari#akari'
+    - 'For fuzzy search - Format: FunamiYui'
+    - 'For PUUID search - Format: <puuid>'
+
+PlayerTagEditModal:
+  title: Edit Player Tag
+  loading: Loading...
+  save: Save
+  cancel: Cancel
+  placeholder: Enter the tag for player {{name}}
+
+ShortcutSelector:
+  title: Shortcut Recording
+  hint: Press keys to record the shortcut
+  clear: Clear
+  unset: Unset
+  tooComplicated: This shortcut combination is highly complex, please confirm
+  notRunAsAdministrator: Not running as administrator, cannot use shortcut key
+  reservedShortcut: This shortcut combination is reserved
+  beingOccupied: This shortcut combination is already in use
+  unchanged: (Unchanged)
+  ok: Confirm
+  cancel: Cancel
+  select: Select
+
+UpdateModal:
+  newVersion: New Version
+  versionFeatures: Version Features
+  newVersionAvailable: 'New version available: {{version}} (Current version: {{currentVersion}})'
+  currentVersion: 'Current Version: {{version}}'
+  releasePage: Release Page
+  download: Download
+
+Client:
+  leagueClient:
+    title: League Client
+
+    disconnect:
+      label: Disconnect
+      description: Disconnect League Akari from the League Client.
+      button: Disconnect
+
+    quitClient:
+      label: Quit Client Process
+      description: Close the League Client.
+      button: Quit Client Process
+
+      dialog:
+        title: Quit Client Process
+        content: Are you sure you want to quit the client process? This will directly close the game.
+        positiveText: Quit
+        negativeText: Cancel
+
+  gameClient:
+    title: Game Client
+
+    terminateGameClientWithShortcut:
+      labelAdminRequired: Terminate Game Client with shortcut (Admin Required)
+      label: Terminate Game Client with shortcut
+      description: When the game client is running and in the foreground, using the shortcut can forcibly terminate the game client process. Please note that this action forcefully ends the process and is not a normal game exit procedure, potentially leading to unexpected side effects.
+
+    terminateShortcut:
+      label: Terminate Shortcut
+      labelAdminRequired: Terminate Shortcut (Admin Required)
+      description: Set a custom shortcut to forcibly terminate the game client process.
+
+    settingsFileMode:
+      label: Lock Settings
+      description: Adjust the writability of the settings for the current logged-in client. Setting to read-only prevents the game client from modifying the settings, while setting to writable allows the game client to modify the settings.
+      setReadonlyButton: Set to Read-Only
+      setWritableButton: Set to Writable
+      setToReadonly: Set to Read-Only
+      setToWritable: Set to Writable
+      failedToSet: 'Failed to set the settings file mode: {{reason}}'
+      readonly: 'Current: Read-Only'
+      writable: 'Current: Writable'
+
+  leagueClientUx:
+    title: League Client UX
+
+    fixWindowMethodAOptions:
+      label: Adjust Window Size
+      labelAdminRequired: Adjust Window Size (Admin Required)
+      description: '<a target="_blank" href="https://github.com/LeagueTavern/fix-lcu-window">FixLCUWindow</a> - Adjust the window size using WinAPI. This can be attempted when the client interface size is incorrect.'
+      button: Adjust
+      dialog:
+        title: Adjust Window Size
+        content: Do you want to adjust the window size? Try this operation if the client is not displaying properly.
+        positiveText: Adjust
+        negativeText: Cancel
+
+    restartUx:
+      label: Restart Client UI
+      description: Immediately restart the rendering process. This operation does not affect ongoing activities and can be used to fix client UI errors.
+      button: Restart UX Process
+      dialog:
+        title: Restart UX Process
+        content: Do you want to restart the UX process? Try this operation if the client is not displaying properly.
+        positiveText: Restart
+        negativeText: Cancel
+
+    killUx:
+      label: Kill UX Process
+      description: Immediately terminate the rendering process. This operation does not affect ongoing activities.
+      button: Kill UX Process
+      dialog:
+        title: Kill UX Process
+        content: Are you sure you want to kill the UX process? You might need to restart this process. Killing the UX process will not cause the game to exit but can significantly reduce resource usage.
+        positiveText: Kill
+        negativeText: Cancel
+
+    launchUx:
+      label: Launch UX Process
+      description: Immediately launch the rendering process if it has been closed.
+      button: Launch UX Process
+      dialog:
+        title: Launch UX Process
+        content: Do you want to launch the UX process?
+        positiveText: Launch
+        negativeText: Cancel
+
+Toolkit:
+  title: Toolkit
+  client: League Client / Game Client
+  in-process: In Process
+  in-game-send: In-Game Send
+  lobby: Lobby Tools
+  misc: Misc
+  claim-tools: Claim Tools
+  friend-tools: Friend Tools
+
+ChampionBench:
+  title: Champion Bench
+  reroll: Reroll
+  charity: Charity
+  charityTitle: Perform a reroll but immediately reclaim the previously assigned champion
+  notInBenchMode: Not currently in a random mode
+  notInPhase: Not in the champion selection phase
+
+  swapFailedNotification:
+    title: Champion Bench
+    description: Failed to swap champions, maybe the champion is no longer available
+
+  rerollFailedNotification:
+    title: Champion Bench
+    description: Failed to reroll, maybe the champion is no longer available
+
+GameflowInProgress:
+  title: In Progress
+
+  dodge:
+    label: Dodge Champion Select
+    description: Immediately exit the current champion selection phase without closing the client.
+    button: Dodge
+
+    failedNotification:
+      title: Dodge Champion Select
+      description: 'Failed to dodge champion select: {{reason}}'
+
+  playAgain:
+    label: Exit Post-Game Screen
+    description: Immediately exit the post-game screen. Useful when the client cannot exit the post-game screen properly.
+    button: Return to Lobby
+
+    failedNotification:
+      title: Exit Post-Game Screen
+      description: 'Failed to exit the post-game screen: {{reason}}'
+
+  leaveLobby:
+    label: Leave Lobby
+    description: Immediately leave the current lobby.
+    button: Leave Lobby
+
+LobbyTool:
+  title: Lobby Tool
+
+  addBot:
+    label: Add Bot
+    description: Add a bot to the current custom or practice lobby.
+    button: Add
+    failedNotification:
+      title: Add Bot
+      description: 'Failed to add bot: {{reason}}'
+
+  loadBots:
+    firstUseNote: To fetch the custom bot list, you need to enter a custom lobby once.
+    failedNotification:
+      title: Load Bot List
+      description: 'Failed to load bot list: {{reason}}'
+
+  createIdLobby:
+    label: Create Queue Lobby
+    description: Create a lobby for a specific queue ID, subject to server availability for the target queue.
+    button: Create
+    selectPlaceholder: Select or specify ID
+
+    failedNotification:
+      title: Create Queue Lobby
+      description: 'Failed to create queue lobby: {{reason}}'
+
+  create5x5PracticeLobby:
+    label: Create 5v5 Practice Lobby
+    button: Create
+
+    failedNotification:
+      title: Create 5v5 Practice Lobby
+      description: 'Failed to create 5v5 practice lobby: {{reason}}'
+
+  loadEligibleQueuesFailedNotification:
+    title: Load Queues Failed
+    description: 'Failed to load the list of available queues: {{reason}}'
+
+  queueOptions:
+    available: Available Queues
+    unavailable: Currently Disabled Queues
+
+  difficultyOptions:
+    RSINTRO: Beginner
+    RSBEGINNER: Intermediate
+    RSINTERMEDIATE: Standard
+
+StrawberryTool:
+  title: Swarm
+  unavailable: Currently not in Swarm mode
+
+  champion:
+    label: Set as Current Champion
+    description: You can try selecting other champions.
+    button: Set
+    failedMessage: 'Failed to set the current champion: {{reason}}'
+
+  championOptions:
+    modeSpecific: Mode-Specific Champions
+    other: Other Champions
+
+  map:
+    label: Select Map
+    description: Maps currently available.
+    button: Set
+    failedMessage: 'Failed to set map: {{reason}}'
+
+  difficulty:
+    label: Set Difficulty
+    description: The preset difficulty levels include [Story], [Hard], and [Extreme]. Currently, you cannot set an unlocked difficulty level.
+    button: Set
+    failedMessage: 'Failed to set difficulty: {{reason}}'
+
+  requestSent: Request sent
+
+ChatAvailability:
+  title: Chat Status
+
+  availability:
+    label: Chat Status
+    description: Display or set the current chat status. Some statuses are only available under specific conditions.
+    radio:
+      chat: Chat
+      mobile: Online (Mobile)
+      away: Away
+      dnd: DND
+      offline: Offline
+      spectating: Spectating
+      online: Online
+    failedNotification:
+      title: Set Chat Status
+      description: 'Failed to set chat status: {{reason}}'
+
+  lockOfflineStatus:
+    label: Try Locking Offline Status
+    description: Set the offline status and try to correct the client's automatic away status.
+    button: Set
+
+ChatStatusMessage:
+  title: Chat Status Message
+
+  message:
+    label: Set Chat Message
+    button: Set
+    success: Chat message set successfully
+
+    failedNotification:
+      title: Set Chat Message
+      description: 'Failed to set chat message: {{reason}}'
+
+  text:
+    label: Text Line
+    description: Chat status text. Setting an empty value will delete the message.
+    placeholder: Enter message
+
+SummonerProfile:
+  title: Summoner
+
+  commonSuccess: Action Successful
+  commonFailed: Unable to Apply
+
+  skinSelectModal:
+    title: Skin Selection
+    button: Set as Current Skin
+    augment: Augment
+    unset: Unset
+
+    failedNotification:
+      title: Profile Background
+      description: 'Failed to apply the current skin: {{reason}}'
+
+  profileBackground:
+    label: Select Summoner Background
+    description: Search for the target champion or skin.
+    button: Select
+
+  bannerAccent:
+    label: Switch to Last Season's Banner
+    description: Switch to last season's banner; this may cause the banner to disappear.
+    button: Execute
+
+    failedNotification:
+      title: Switch to Last Season's Banner
+      description: 'Failed to switch banner: {{reason}}'
+
+  prestigeCrest:
+    label: Remove Prestige Frame
+    description: Remove the prestige frame.
+    descriptionInsufficientLevel: 'Remove the prestige frame (Summoner level must be 525 or higher; current level: {{level}})'
+    button: Execute
+
+    failedNotification:
+      title: Remove Prestige Frame
+      description: 'Failed to remove prestige frame: {{reason}}'
+
+  token:
+    label: Remove All Tokens
+    description: Remove all tokens.
+    button: Execute
+
+    failedNotification:
+      title: Remove All Tokens
+      description: 'Failed to remove all tokens: {{reason}}'
+
+GameView:
+  title: View Game
+
+  game:
+    label: Game ID
+    description: Fetch and view the game using its ID.
+    button: View
+
+FakeRanked:
+  title: Fake Ranked Chat Card
+  commonSuccess: Action Successful
+
+  set:
+    label: Apply Immediately
+    description: Modify the chat card status immediately, effective until the next client restart.
+    button: Fake it
+
+    failedNotification:
+      title: Fake Ranked
+      description: 'Failed to fake ranked status: {{reason}}'
+
+  queue: Queue
+  tier: Tier
+  division: Division
+
+Spectate:
+  title: Spectate
+  leaveButton: Leave Lobby
+  needToLeaveLobby: You need to leave the current lobby to spectate.
+
+  spectate:
+    label: Summoner Spectate
+    description: Spectate a player on the current server by PUUID or summoner name, provided the player is in a spectatable game.
+    button: Start Spectating
+    placeholder: Summoner Name / PUUID
+    errorNoPlayer: Player does not exist.
+
+    notFoundNotification:
+      title: Spectate
+      description: Target player {{name}} not found.
+
+    failedNotification:
+      title: Spectate
+      description: 'Failed to start spectating. The player may not be in a game or the target mode is unspectatable: {{reason}}'
+
+    successNotification:
+      title: Spectate
+      description: Spectating has started.
+
+  token:
+    label: Token Spectate
+    description: Use a special token in the correct format to launch the spectate process in the game client.
+    button: Start Spectating
+    placeholder: Token
+
+    successNotification:
+      title: Spectate
+      description: Spectating has started.
+      useRememberedInstallLocation: Spectating has started, using the detected client location.
+
+    failedNotification:
+      title:
+
+MatchHistoryTabs:
+  disconnected: Not connected to the client
+  noActiveTab: No active match history tab
+  copiedToClipboard: Copied to clipboard
+  dropZoneRosterMember: Drop here to navigate to the player's profile
+
+MatchHistoryTab:
+  prevPage: Previous
+  nextPage: Next
+  refreshPage: Refresh Page
+  rankedMore: More
+  tagPlayer: Tag Player
+  itemPerPage: '{{countV}}'
+  previousName: 'Previously Used Name: {{name}}'
+
+  private:
+    title: Profile Hidden
+    content: This player has set his/her profile to be private.
+
+  tagged:
+    title: Tagged
+    content: This player has been tagged.
+    taggedByOther: Tagged by another account.
+    deletePopconfirm: Confirm to delete this tag?
+
+  matchHistory:
+    empty: No data available.
+
+  stats:
+    title: Overview
+    akariScore: Akari Score
+    na: N/A
+    avgKda: Average KDA
+    avgKp: Kill Participation
+    avgDmg: Damage Share
+    avgDmgTaken: Damage Taken Share
+    avgGold: Gold Share
+    avgCs: CS Share
+    winLose: Wins & Losses
+    win: Win
+    lose: Loss
+    wr: Win Rate
+    champions: Champion Usage
+    times: Games
+
+  recentPlayers:
+    teammatesTitle: Recent Teammates
+    opponentsTitle: Recent Opponents
+    noRecentPlayers: No recent players
+    win: Win
+    lose: Loss
+
+  summoner404: Summoner not found
+  failedToLoadTitle: Failed to Load
+  failedToLoadSummoner: 'Unable to load summoner information: {{reason}}'
+  failedToLoadSummonerProfile: 'Unable to load summoner profile: {{reason}}'
+  failedToLoadRankedStats: 'Unable to load ranked stats: {{reason}}'
+  failedToLoadMatchHistory: 'Unable to load match history: {{reason}}'
+  failedToLoadMatchHistoryHN1: |
+    Unable to load match history: {{reason}}
+    The current region on this page is Ionia. Please note that during certain times (especially in the evening), match history data may not be returned properly.
+  failedToLoadMatchHistoryGame: 'Unable to load match: {{reason}}'
+  failedToLoadTags: 'Unable to load player tags: {{reason}}'
+  failedToUpdateTag: 'Unable to update player tag: {{reason}}'
+  failedToDeleteTag: 'Unable to delete player tag: {{reason}}'
+  operationSuccessTitle: Operation Successful
+  operationFailedTitle: Operation Failed
+  spectatorCalledUp: Spectator mode initiated
+  spectatorCalledUpByCmd: 'Process initiated. Note: Starting spectator mode may result in a black screen. If it persists, please manually terminate the process.'
+  failedToCallUpSpectator: 'Failed to initiate spectator mode: {{reason}}'
+  failedToTakeScreenshotNoData: Screenshot attempt failed, no image data obtained
+  failedToTakeScreenshot: 'Screenshot attempt failed: {{reason}}'
+  copiedToClipboard: Copied to clipboard
+
+MatchHistoryCard:
+  kprTitle: 'Kill participation in team: {{rate}}%'
+  ddrTitle: 'Damage dealt to champions: {{rate}}%'
+  dtrTitle: 'Damage taken in team: {{rate}}%'
+  grTitle: 'Team gold share: {{rate}}%'
+  kpr: KPR {{rate}}%
+  ddr: DMG {{rate}}%
+  dtr: DMG Taken {{rate}}%
+  gr: Gold {{rate}}%
+  misc: Misc
+  perfect: Perfect
+  expand: Expand
+  collapse: Collapse
+  loading: Loading...
+  error: Failed to load
+  practiceTool: Practice
+  win: Win
+  lose: Loss
+  remake: Remake
+  abort: Aborted
+  surrender: Surrender
+
+StandaloneMatchHistoryCardModal:
+  notFound: Game not found
+  error: Failed to load game
+  reload: Reload
+  loading: Loading...
+  errorNotification:
+    title: Error loading {{gameId}}
+    description: 'Cannot fetch game: {{reason}}'
+
+MiscellaneousPanel:
+  gameId: Game ID {{gameId}}
+  gameDate: Game Date {{date}}
+  server: 'Server: {{server}}'
+  bans: 'Bans:'
+
+  stats:
+    championId: Champion
+    spells: Summoner Spells
+    teams: Team
+    assists: Assists
+    causedEarlySurrender: Early Surrender Initiator
+    champLevel: Champion Level
+    combatPlayerScore: Combat Player Score
+    damageDealtToObjectives: Damage to Objectives
+    damageDealtToTurrets: Damage to Turrets
+    damageSelfMitigated: Damage Self Mitigated
+    deaths: Deaths
+    doubleKills: Double Kills
+    earlySurrenderAccomplice: Early Surrender Accomplice
+    firstBloodAssist: First Blood Assist
+    firstBloodKill: First Blood
+    firstInhibitorAssist: First Inhibitor Assist
+    firstInhibitorKill: First Inhibitor Destroyed
+    firstTowerAssist: First Tower Assist
+    firstTowerKill: First Tower Destroyed
+    gameEndedInEarlySurrender: Ended in Early Surrender
+    gameEndedInSurrender: Ended in Surrender
+    goldEarned: Gold Earned
+    goldSpent: Gold Spent
+    inhibitorKills: Inhibitors Destroyed
+    item0: Item 0
+    item1: Item 1
+    item2: Item 2
+    item3: Item 3
+    item4: Item 4
+    item5: Item 5
+    item6: Item 6
+    killingSprees: Killing Sprees
+    kills: Kills
+    largestCriticalStrike: Largest Critical Strike
+    largestKillingSpree: Largest Killing Spree
+    largestMultiKill: Largest Multi Kill
+    longestTimeSpentLiving: Longest Time Alive
+    magicDamageDealt: Magic Damage Dealt
+    magicDamageDealtToChampions: Magic Damage to Champions
+    magicalDamageTaken: Magic Damage Taken
+    neutralMinionsKilled: Neutral Minions Killed
+    neutralMinionsKilledEnemyJungle: Neutral Minions Killed (Enemy Jungle)
+    neutralMinionsKilledTeamJungle: Neutral Minions Killed (Team Jungle)
+    objectivePlayerScore: Objective Player Score
+    participantId: Participant ID
+    pentaKills: Penta Kills
+    perk0: Perk 0
+    perk0Var1: Perk 0 Var 1
+    perk0Var2: Perk 0 Var 2
+    perk0Var3: Perk 0 Var 3
+    perk1: Perk 1
+    perk1Var1: Perk 1 Var 1
+    perk1Var2: Perk 1 Var 2
+    perk1Var3: Perk 1 Var 3
+    perk2: Perk 2
+    perk2Var1: Perk 2 Var 1
+    perk2Var2: Perk 2 Var 2
+    perk2Var3: Perk 2 Var 3
+    perk3: Perk 3
+    perk3Var1: Perk 3 Var 1
+    perk3Var2: Perk 3 Var 2
+    perk3Var3: Perk 3 Var 3
+    perk4: Perk 4
+    perk4Var1: Perk 4 Var 1
+    perk4Var2: Perk 4 Var 2
+    perk4Var3: Perk 4 Var 3
+    perk5: Perk 5
+    perk5Var1: Perk 5 Var 1
+    perk5Var2: Perk 5 Var 2
+    perk5Var3: Perk 5 Var 3
+    perkPrimaryStyle: Primary Perk Style
+    perkSubStyle: Secondary Perk Style
+    physicalDamageDealt: Physical Damage Dealt
+    physicalDamageDealtToChampions: Physical Damage to Champions
+    physicalDamageTaken: Physical Damage Taken
+    playerAugment1: Augment 1
+    playerAugment2: Augment 2
+    playerAugment3: Augment 3
+    playerAugment4: Augment 4
+    playerAugment5: Augment 5
+    playerAugment6: Augment 6
+    playerScore0: Player Score 0
+    playerScore1: Player Score 1
+    playerScore2: Player Score 2
+    playerScore3: Player Score 3
+    playerScore4: Player Score 4
+    playerScore5: Player Score 5
+    playerScore6: Player Score 6
+    playerScore7: Player Score 7
+    playerScore8: Player Score 8
+    playerScore9: Player Score 9
+    playerSubteamId: Subteam ID
+    quadraKills: Quadra Kills
+    sightWardsBoughtInGame: Sight Wards Bought
+    subteamPlacement: Subteam Placement
+    teamEarlySurrendered: Team Early Surrendered
+    timeCCingOthers: Time CCing Others
+    totalDamageDealt: Total Damage Dealt
+    totalDamageDealtToChampions: Total Damage to Champions
+    totalDamageTaken: Total Damage Taken
+    totalHeal: Total Healing
+    totalMinionsKilled: Total Minions Killed
+    totalPlayerScore: Total Player Score
+    totalScoreRank: Total Score Rank
+    totalTimeCrowdControlDealt: Total Crowd Control Time
+    totalUnitsHealed: Total Units Healed
+    tripleKills: Triple Kills
+    trueDamageDealt: True Damage Dealt
+    trueDamageDealtToChampions: True Damage to Champions
+    trueDamageTaken: True Damage Taken
+    turretKills: Turrets Destroyed
+    unrealKills: Unreal Kills
+    visionScore: Vision Score
+    visionWardsBoughtInGame: Control Wards Bought
+    wardsKilled: Wards Killed
+    wardsPlaced: Wards Placed
+    win: Win
+    currentPlatformId: Current Server
+    platformId: Platform ID
+
+DetailedGame:
+  win: Win
+  lose: Loss
+  controlWard: Control Wards
+  wardPlaced: Placed {{countV}}, Cleared {{cleared}}
+  csPerMinute: '{{countV}} / min'
+  bot: Bot
+
+  header:
+    kda: KDA
+    dmg: Damage / Taken
+    ward: Wards
+    cs: CS
+    gold: Gold
+    item: Items
+    augment: Augments
+
+SummonerSpellDisplay:
+  cooldown: 'Cooldown: {{time}} s'
+  levelRequirement: 'Level: {{level}} Required'
+
+CopyableText:
+  copy: Copy
+  copied: Copied to clipboard
+
+ItemDisplay:
+  combinePrice: Combine for {{gold}} G
+
+PlayerInfoCard:
+  empty: No Content
+  loadingMatchHistory: Loading...
+  errorLoadingMatchHistory: Unable to load
+  top4Rate: Top 4 Rate
+  1stRate: First Place Rate
+  1st: '{{rate}}%'
+  position:
+    recentlyPlayed: 'Preference:'
+    selection: 'Selection:'
+
+  cherryWinRatePopover: In the recent {{countV}} games, this player's win rate is {{winRate}}%. Among {{cherryCount}} games in Arena Mode, their first place rate is {{top1Rate}}%.
+  winRatePopover: In the recent {{countV}} games, this player's win rate is {{winRate}}%, {{wins}} wins and {{losses}} losses.
+  kdaPopover: In the recent {{countV}} games, this player's average KDA is {{kda}} ({{kills}} / {{deaths}} / {{assists}})
+  premadePopover: They are a premade team. Labeled as Team {{team}}.
+  highWinRatePopover: This player's win rate is exceptionally high. In the recent {{countV}} games, they have won {{winCount}} games.
+  teamDamageShare: Dmg {{rate}}%
+  teamDamageSharePopover: In the recent {{countV}} games, this player's average team damage share is {{rate}}%
+  teamDamageTakenShare: Dmg Taken {{rate}}%
+  teamDamageTakenSharePopover: In the recent {{countV}} games, this player's average team damage taken share is {{rate}}%
+  teamGoldShare: Gold {{rate}}%
+  teamGoldSharePopover: In the recent {{countV}} games, this player's average team gold share is {{rate}}%
+  damageGoldEfficiency: Dmg-Gold {{rate}}%
+  damageGoldEfficiencyPopover: In the recent {{countV}} games, this player's average damage to gold efficiency is {{rate}}%
+  enemyMissingPings: Missing pings {{countV}}
+  enemyMissingPingsPopover: This player has sent enemy missing pings an average of {{countV}} times per game
+  visionScore: Vision Score {{countV}}
+  visionScorePopover: This player's average vision score is {{countV}}
+  metPopover:
+    title: Previously encountered this player in {{date}}, a total of {{countV}} times.
+    gameId: Game ID
+    inspectByGameId: Inspect {{gameId}}
+    date: Game Date
+    gameStats: Game Stats
+    winResult:
+      abort: Abort
+      lose: Lose
+      remake: Remake
+      win: Win
+    team:
+      teammate: Ally
+      opponent: Enemy
+  privatePopover: This player has set their career profile to private, preventing others from viewing their profile, match history, and achievements. Additionally, they cannot be spectated.
+  winningStreakPopover: Currently on a winning streak of {{countV}} games. Great job!
+  losingStreakPopover: Currently on a losing streak of {{countV}} games.
+  suspiciousFlashPosition: SusFlash
+  suspiciousFlashPositionPopover: Flash position preference is suspiciously inconsistent. In recent games, Flash on D has been used {{dCount}} times and Flash on F has been used {{fCount}} times.
+  soloKills:
+    tooManySoloDeathsInEarlyGame: '{{times}} Solo Deaths'
+    tooManySoloDeathsInEarlyGamePopover: In the recent {{countV}} games, in the first {{minutes}} minutes, this player was solo killed {{times}} times on average
+    tooManySoloKillsInEarlyGame: '{{times}} Solo Kills'
+    tooManySoloKillsInEarlyGamePopover: In the recent {{countV}} games, in the first {{minutes}} minutes, this player get solo kills {{times}} times on average
+  akariLoved:
+    good: Good
+    great: Excellent
+    goodPopover: This player has performed well in recent games.
+    greatPopover: This player has shown exceptional performance in recent games.
+  champion:
+    winRate: 'Recent {{countV}} games, win rate {{winRate}}%'
+    level: 'Level {{level}}'
+    masteryPoints: '{{points}} mastery points'
+  matchHistory:
+    winResult:
+      na: '-'
+      win: W
+      lose: L
+      remake: R
+      abort: Abrt
+
+  self: Self
+  tagged: Tagged
+  premade: Team {{team}}
+  highWinRate: High Win Rate
+  met: Met
+  private: Private
+  winningStreak: '{{countV}} Wins'
+  losingStreak: '{{countV}} Losses'
+
+TeamTagsArea:
+  winRateTeam: Win-Rate Team
+  loseRateTeam: Lose-Rate Team
+  premade: 'Premade {{countV}}'
+  winRate: 'Win Rate {{rate}}%'
+  kda: 'KDA {{kda}}'
+
+OngoingGame:
+  disconnected: Not connected to the client
+  waitingForSpectate: Waiting for spectate delay
+  noOngoingGame: No ongoing game
+  disabled: Game analysis disabled
+  avgTeamWinRate: Average Team Win Rate
+  avgTeamKda: Average Team KDA
+
+AuxWindowTitleBar:
+  opgg: OP.GG View
+  opggTitle: View on OP.GG
+  close: Close
+  minimize: Minimize
+  indicator: Aux Win.
+  indicatorTitle: Auxiliary Window of League Akari
+  pin: Pin
+  unpin: Unpin
+  repositionToAlignLeagueClientUx: Align with League Client UX
+
+OpggWindowTitleBar:
+  close: Close
+  minimize: Minimize
+  pin: Pin
+  unpin: Unpin
+  repositionToAlignLeagueClientUx: Align with League Client UX
+
+BenchChampionsMini:
+  title: Champion Bench
+  reroll: 'Reroll (Remaining: {{countV}})'
+  charity: 'Reroll and Take back (Remaining: {{countV}})'
+  notInBenchMode: Not currently in a bench mode
+  notInPhase: Not in the champion selection phase
+  rerollFailed: Failed to reroll {{reason}}
+
+  balanceTypes:
+    damage-dealt: Damage Dealt
+    damage-taken: Damage Taken
+    healing: Healing
+    shielding: Shielding
+    ability-haste: Ability Haste
+    mana-regen: Mana Regen
+    health-regen: Health Regen
+    attack-speed: Attack Speed
+    movement-speed: Movement Speed
+    tenacity: Tenacity
+
+BenchModeAutoGrab:
+  grabbing: Selecting in {{seconds}}s
+  noExpectedChampions: No expected champion list set for auto-selection
+  noCandidate: No available champions for auto-selection
+
+ChampSelectActions:
+  picked: Picked
+  voted: Voted
+  banned: Banned
+  autoPick: Auto Pick
+  autoBan: Auto Ban
+  picking: Picking
+  banning: Banning
+  voting: Voting
+  tenBansRevealing: bans Revealing
+  inProgress: In Progress
+  completed: Completed
+
+ChampSelectOperations:
+  dodge:
+    label: Exit Champion Select
+    button: Dodge Now
+    popconfirm: This will exit the champion select phase.
+    positiveText: Exit
+    negativeText: Cancel
+
+  dodgeAtLastSecond:
+    label: Last-Second Dodge Threshold
+    waitingForTiming: Last-Second Dodge (Waiting)
+    waiting: Dodge in {{seconds}} s
+    text: 'Last-Second Dodge'
+    thresholdWarning: A threshold that is too low ({{seconds}} s) may result in dodge failure
+
+  autos:
+    autoPick: Auto Pick
+    autoBan: Auto Ban
+    autoGrab: Auto Grab
+
+LoungeOperations:
+  immediately: Immediately
+  second: s
+
+  autoAccept:
+    label: Auto Accept
+    unavailable: Unavailable
+
+  autoMatchmaking:
+    label: Auto Matchmaking
+    unavailable: Unavailable
+
+  autoMatchmakingMinimumMembers:
+    label: Minimum Members
+
+  autoMatchmakingDelaySeconds:
+    label: Pre-Matchmaking Delay
+
+  autoMatchmakingWaitForInvitees:
+    label: Wait for Invitees
+
+SkinSelectionMini:
+  skins: '{{countV}} skins available'
+  button: Apply
+  success: Skin applied successfully
+  failed: Skin application failed
+
+Lounge:
+  map: Map
+  gameMode: Mode
+  wait: Waiting
+  atMost: At Most
+
+  autoAccept:
+    acceptIn: Auto-accept in {{seconds}} s
+    cancelButton: Cancel this auto-accept
+    declineButton: Decline Match
+    acceptButton: Accept Match
+    accepted: Accepted
+    pending: Waiting to accept match
+    subtitle1: Matches already accepted can still be declined
+    subtitle2: Matches already canceled can still be accepted
+    declined: Declined
+
+  matchmaking:
+    stopAndDisable: Stop matchmaking and disable auto-matchmaking
+    stop: Stop matchmaking
+    cancel: Cancel this auto-matchmaking
+    searching: Searching
+    searchIn: Searching {{seconds}} s
+    waitingForPenalty: Waiting for dodge timer {{seconds}} s
+    waitingForMembers: Auto-matchmaking requires {{countV}} players
+    waitingForInvitees: Waiting for invited members
+
+Placeholder:
+  inProgress: In Progress
+  idle: No active activities
+  spectating: Spectating
+
+Opgg:
+  toOpgg: Go to OP.GG
+  refresh: Refresh
+  close: Close
+  tier: Tier
+  champion: Champion
+  empty: None
+  mode: Mode
+  region: Region
+  rankTier: Rank Tier
+  position: Position
+  version: Version
+  replace: Provide
+  create: Create
+  notConnected: Not connected to the client, some resources may not be loaded
+
+  settings:
+    button: Settings
+    title: OP.GG Settings
+
+    flashPosition:
+      label: Flash Position Preference
+      description: When setting summoner spells, prioritize the position for Flash if it is selected
+      auto: Current Flash position
+      options:
+        d: Default Flash position is D
+        f: Default Flash position is F
+        auto: Decide based on the current Flash position
+
+    autoApplyRunes:
+      label: Auto Apply Runes
+      description: Automatically apply the highest pick rate summoner spells and runes if the champion data matches the current mode. Only effective when the OP.GG window is enabled and visible
+
+    autoApplySpells:
+      label: Auto Apply Summoner Spells
+      description: Automatically apply the highest pick rate summoner spells and runes if the champion data matches the current mode. Only effective when the OP.GG window is enabled and visible
+
+    autoApplyItems:
+      label: Auto Apply Item Builds
+      description: Automatically apply item builds if the champion data matches the current mode. Only effective when the OP.GG window is enabled and visible
+
+  success: 'Request sent: {{reason}}'
+  summonerSpells: Summoner Spells
+  runes: Rune Builds
+  loadVersionsFailedMessage: 'Failed to fetch version data: {{reason}}'
+  loadTierFailedMessage: 'Failed to fetch tier data: {{reason}}'
+  loadChampionFailedMessage: 'Failed to fetch champion data: {{reason}}'
+  setSpellsFailedMessage: 'Failed to set summoner spells: {{reason}}'
+  setRunesFailedMessage: 'Failed to set rune builds: {{reason}}'
+  spellsSet: '[League Akari] Summoner spells set: [OP.GG] {{spell1}} | {{spell2}}'
+  runesSet: '[League Akari] {{action}} rune build: {{name}}'
+
+  modes:
+    ranked: 'Ranked'
+    aram: 'ARAM'
+    arena: 'Arena'
+    nexus_blitz: 'Nexus Blitz'
+    urf: 'URF'
+    none: 'None'
+
+  positions:
+    top: 'Top'
+    jungle: 'Jungle'
+    mid: 'Mid'
+    adc: 'Adc'
+    support: 'Support'
+    none: 'None'
+
+  regions:
+    global: 'Global'
+    na: 'North America'
+    euw: 'Europe West'
+    kr: 'Korea'
+    br: 'Brazil'
+    eune: 'Europe Nordic & East'
+    jp: 'Japan'
+    lan: 'Latin America North'
+    las: 'Latin America South'
+    oce: 'Oceania'
+    tr: 'Turkey'
+    ru: 'Russia'
+    sg: 'Singapore'
+    id: 'Indonesia'
+    ph: 'Philippines'
+    th: 'Thailand'
+    vn: 'Vietnam'
+    tw: 'Taiwan'
+    me: 'Middle East'
+
+  tiers:
+    all: 'All Tiers'
+    ibsg: 'Gold -'
+    gold_plus: 'Gold +'
+    platinum_plus: 'Platinum +'
+    emerald_plus: 'Emerald +'
+    diamond_plus: 'Diamond +'
+    master: 'Master'
+    master_plus: 'Master +'
+    grandmaster: 'Grandmaster'
+    challenger: 'Challenger'
+
+OpggTier:
+  searchPlaceholder: Search for name
+  columns:
+    champion: Name
+    tier: Tier
+    winRate: W/R
+    pickRate: P/R
+    counter: Counters
+    banRate: B/R
+
+OpggChampion:
+  adorableRabi: Kawaii Bunny
+  avgPlace: Avg. Rank
+  1st: 1st Place
+  winRate: Win Rate
+  pickRate: Pick Rate
+  plays: Total Games
+  banRate: Ban Rate
+  counter: Counter
+  allCounters: All
+  counterC: Counter
+  allC: All
+  empty: No Data Available
+  times: '{{times}} Games'
+  showAll: Show All
+  spells: Summoner Spells
+  apply: Apply
+  runes: Rune Builds
+  abilityBuild: Ability Leveling
+  starterItemText: Starting Items
+  prismItemText: Prism Tier Items
+  coreItemText: Core Items
+  itemText: Items
+  tierText: T{{tier}}
+  applyRunes: Import Current Item Build
+  applyRunesText: Build Applied
+  augmentGold: Gold
+  augmentSilver: Silver
+  augmentPrism: Prism
+  synergies: Synergies
+
+  writeToDisk: '[League Akari] Written to item build: {{name}}'
+  writtenToDisk: Successfully written to file
+  writeFileFailedMessage: Failed to write file {{reason}}
+  bootsDesc: Boots (sorted by pick rate)
+  prismItemsDesc: Prism Tier Items (sorted by pick rate)
+  itemsDesc: Items (sorted by pick rate)
+  coreItem: 'Core Item #{{index}} | Pick Rate {{pickRate}}%'
+  starterItem: 'Starting Item #{{index}} | Pick Rate {{pickRate}}%'
+
+EasyToLaunch:
+  tcls: TCLS Client
+  weGame: WeGame
+  riotClient: Riot Client
+  successMessage: 'Successfully launched: {{name}}'
+  failedMessage: 'Failed to launch {{name}}: {{reason}}'
+
+InGameSend:
+  settings:
+    title: Settings
+    cancelShortcut:
+      label: Cancel Shortcut
+      description: Set a shortcut key to cancel any sending action
+    sendInterval:
+      label: Send Interval (ms)
+      description: Set the interval between each simulated sending action
+
+ChampionConfig:
+  targetMode: Target Mode
+  ranked: Ranked
+  normal: Normal
+  aram: ARAM
+  urf: URF
+  nexusblitz: Nexus Blitz
+  ultbook: Ultimate Spellbook
+  runes: Runes
+  configure: Configure
+  spells: Spells
+  position: Position
+  default: Default
+  runesConfigured: Runes Configured
+  spellsConfigured: Spells Configured
+  runesUnconfigured: Runes Unconfigured
+  spellsUnconfigured: Spells Unconfigured
+  configureRunes: Configure Runes
+  configureSpells: Configure Spells
+  clear: Clear
+  restore: Restore
+  save: Save
+  noChampionPlaceholder: Select a champion to view configurations
+  runesSaved: Rune configurations saved
+  runesRestored: Rune configurations restored
+  spellsSaved: Spell configurations saved
+  spellsRestored: Spell configurations restored
+  searchPlaceholder: Search champions
+
+RuneEditV2:
+  unsupported: Current rune setup is not supported
+
+AutoChampConfig:
+  title: Auto Champion Configuration
+  enabled:
+    label: Enable
+    description: Automatically configure runes or summoner spells based on presets after locking in a champion during champion select
+  configure:
+    label: Configure
+
+BenchChampionTracker:
+  position_ordinal_one: '{{count}}st'
+  position_ordinal_two: '{{count}}nd'
+  position_ordinal_three: '{{count}}rd'
+  position_ordinal_other: '{{count}}th'
+  reroll: Reroll
+  trade: Trade
+  swap: Swap
+  useReroll: '{{player}} used a reroll'
+  tradeWithPlayer: '{{player1}} traded with {{player2}}'
+  swapFromBench: '{{player}} swapped from the bench'
+  sendDiceUsageToChat: Send Dice Usage to Chat
+  sendButton: Send
+  diceUsageTitle: 'Dice Usage:'
+  diceUsage: '{{player}} used {{countV}} dice ({{champions}})'
+
+RewardClaimTool: &CommonClaimTool
+  title: Rewards
+
+  hint: To find something forgotten.
+
+  columns:
+    rewardList: Claimable Items
+
+  refreshButton: Refresh
+  claimButton: Claim
+  claimButtonC: Claim ({{countV}})
+  cancelButton: Cancel
+
+  refreshSuccess: Refreshed
+  refreshFailed: Failed to fetch {{reason}}
+  claimFailed: Failed to claim {{reason}}
+  claimed: Claimed {{item}}
+
+EventHubClaimTool:
+  title: Event Hub
+
+  hint: Items in this column may overlap with some items in "Rewards". Claiming any one of them is sufficient.
+
+  <<: *CommonClaimTool
+
+MissionClaimTool:
+  <<: *CommonClaimTool
+
+  title: Missions
+  hint: Completing missions in advance may cause data inconsistency. Please use with caution.
+
+ClaimableItem:
+  untranslatedC: Unnamed Group ({{countV}})
+
+FriendTools:
+  title: Friends
+
+  deleteButtonC: Delete ({{countV}})
+  deleteButton: Delete
+  cancelButton: Cancel
+  refreshButton: Refresh
+  deleteSuccess: Deleted {{countV}} friends
+  deletePopconfirm: This will perform a deletion operation and cannot be undone
+  refreshSuccess: Refreshed
+  neverPlayed: No match data
+  unknown: Unknown
+
+  groupNames:
+    '**Default': General
+
+  columns:
+    groupName: Friend Group
+    lastGameDate: Last Game Date
+    friendSince: Friend Since
+
+SummonerSpellsCdTimer:
+  countdown: '{{championName}} {{spellName}} {{minutes}}m{{seconds}}s until ready'
+  countup: '{{championName}} {{spellName}} {{minutes}}m{{seconds}}s used'
+
+BackgroundTasks:
+  taskTitle: Ongoing Tasks ({{countV}})
+
+TemplateEdit:
+  newButton: New Template
+  errorTitle: This template is invalid. Please check its validity
+  noTemplate: No Template
+  revertButton: Revert
+  saveButton: Save
+  deleteButton: Delete
+  saveSuccess: Saved {{name}}
+  deleteSuccess: Deleted {{name}}
+  deletePopconfirm: This will perform a deletion operation and cannot be undone
+  noTemplateSelected: No template selected
+  filterPlaceholder: Search templates
+  hint: 'Use a JavaScript template to combine the text to send. These JavaScript scripts have high privileges and can access any local file. Please <span style="font-weight: bold">ALWAYS</span> confirm their safety'
+  title: Template Definitions
+
+SendableItemEdit:
+  title: Sendable Item
+  newButton: New Sendable Item
+  errorTitle: This sendable item is invalid. Please check its validity
+  noSendableItem: No Sendable Item
+  noSendableItemSelected: No sendable item selected
+  filterPlaceholder: Search sendable items
+  revertButton: Revert
+  saveButton: Save
+  deleteButton: Delete
+  errorTemplateInvalid: Invalid template used
+  plaintextPlaceholder: |
+    Provide the text split by lines here, like:
+    First line
+    Second line
+    Third line
+  itemEnabled: Enabled
+  deleteSuccess: Deleted {{name}}
+  deletePopconfirm: This will perform a deletion operation and cannot be undone
+  saveSuccess: Saved {{name}}
+  dryRunEmpty: Dry run result is empty
+  dryRunError: 'Dry run failed: {{reason}}'
+
+  contentType:
+    label: Content Type
+    description:
+      plaintext: Plain text type will send the content split by lines
+      template: Dynamic template will use JavaScript script to generate sending content
+  enabled:
+    label: Enable This Sendable Item
+  template:
+    label: Use Template
+    description: Use this template to generate sending content
+  sendShortcut:
+    label: Send Shortcut
+  sendAllShortcut:
+    label: Send All Shortcut
+    description: Send content to all players in the game
+  sendAllyShortcut:
+    label: Send Allies Shortcut
+    description: Send content to all allies in the game
+  sendEnemyShortcut:
+    label: Send Enemies Shortcut
+    description: Send content to all enemies in the game
+  dryRun:
+    label: Dry Run
+    description: Dry run the sending content, will not actually send
+    all: All
+    ally: Allies
+    enemy: Enemies
+
+simple-notifications-renderer:
+  liveStreamingHints:
+    dismiss: Dismiss
+    neverShowAgain: Never Show Again
+    toSettings: To Settings
+
+    detected:
+      title: Are you live streaming?
+      liveTools: League Akari has detected one or more live streaming tools running. You can enable Streamer Mode to hide sensitive information
+      bySettings: League Akari has detected that the league client live streaming mode is enabled. You can enable live streaming mode to hide sensitive information
+
+league-client-renderer:
+  initialization-task:
+    name: LCU Initialization
+    current: Loading {{endpoint}} ({{finishedCount}}/{{allCount}})
+
+  connection-task:
+    name: Connect to LCU
+    target: Attempt connecting to {{target}}...
+
+self-update-renderer:
+  self-update-task:
+    name: League Akari Update
+    downloading: Downloading archive {{progress}}% ({{avgSpeed}}/s, eta {{eta}})
+    download-failed: Failed to download archive
+    unpacking: Unpacking archive {{progress}}%
+    unpack-failed: Failed to unpack the archive file
+    waiting-for-restart: Updated applied. Restart the application to apply the update
+    cancelButton: Cancel
+
+champions:
+  bravery: Bravery
+
+tray:
+  quit: Quit
+  auxWindow: Aux Window
+  opggWindow: OP.GG Window
+  dev:
+    toggleMainWindowDevtools: Toggle DevTools - Main Window
+    toggleAuxWindowDevtools: Toggle DevTools - Aux Window
+    toggleOpggWindowDevtools: Toggle DevTools - OP.GG Window
+    toggleOngoingGameWindowDevtools: Toggle DevTools - Ongoing Game Window
+    toggleCdTimerWindowDevtools: Toggle DevTools - Cooldown Timer Window
+
+windowOpenHandler:
+  toAkari: To League Akari GitHub ❤️
+  toExternalLink: To external site {{target}}
+
+auto-gameflow-main:
+  error-auto-honor: 'Auto honor failed: {{reason}}'
+  error-accept-match: 'Auto accept match failed: {{reason}}'
+  error-matchmaking: 'Auto matchmaking could not start: {{reason}}'
+  auto-matchmaking-canceled: Auto matchmaking canceled
+  auto-matchmaking-canceled-wait-for-invitees: Auto matchmaking canceled, waiting for invitees
+  auto-matchmaking-canceled-not-leader: Auto matchmaking canceled, you are not the room leader
+  auto-matchmaking-canceled-wait-for-penalty: Auto matchmaking canceled, waiting for penalty timer
+  auto-matchmaking-in: Auto matchmaking in {{seconds}} seconds
+  skip-leader: Attempting to skip becoming the leader
+
+auto-select-main:
+  error-pick: 'Failed to auto select champion, target champion {{champion}}: {{reason}}'
+  error-pre-pick: 'Failed to auto pre-select champion, target champion {{champion}}: {{reason}}'
+  error-ban: 'Failed to auto ban champion, target champion {{champion}}: {{reason}}'
+  error-bench-swap: 'Failed to auto swap champion, target champion {{champion}}: {{reason}}'
+  cancel-grab: Selection of {{champion}} has been canceled
+  grab-soon: Will swap {{champion}} in {{seconds}} seconds
+  ignore-trade: Trade request not auto-processed ({{from}} -> {{to}})
+  ignore-trade-owner: Trade request not auto-processed since the trader is the champion owner ({{from}} -> {{to}})
+  auto-pick-normal-mode: Auto-select in Normal Mode
+  auto-grab-bench-mode: Auto-select in Bench Mode
+  auto-ban: Auto Ban
+  enabled: Enabled
+  delayed-lock-in: Will lock in champion {{champion}} in {{seconds}} seconds
+  delayed-ban: Will ban champion {{champion}} in {{seconds}} seconds
+  cancel-delayed-lock-in: Lock-in of champion {{champion}} has been canceled
+  cancel-delayed-ban: Ban of champion {{champion}} has been canceled
+
+self-update-main:
+  title: Self Update
+  start-update: Starting update League Akari
+  updateOnNextStartup: Updated Applied. Restart the application to apply the update
+  lastUpdateFailed: The last update failed, please <a href="{{url}}" target="_blank">update the application manually</a>
+  lastUpdateSuccess: Updated to {{version}}
+
+auto-champ-config-main:
+  summonerSpells:
+    applied: '{{name}} summoner spells have been updated to [{{spell1}}] [{{spell2}}]'
+    appliedWithPosition: '{{name}} - {{position}} summoner spells have been updated to [{{spell1}}] [{{spell2}}]'
+    errorApplied: 'Failed to update summoner spells for {{name}}'
+    errorAppliedWithPosition: 'Failed to update summoner spells for {{name}} - {{position}}'
+
+  runes:
+    pageName: '{{name}}'
+    pageNameWithPosition: '{{name}} - {{position}}'
+    applied: '{{name}} rune setup has been updated to {{primary}} / {{sub}} ({{all}})'
+    appliedWithPosition: '{{name}} - {{position}} rune setup has been updated to {{primary}} / {{sub}} ({{all}})'
+    errorApplied: 'Failed to update rune setup for {{name}}'
+    errorAppliedWithPosition: 'Failed to update rune setup for {{name}} - {{position}}'
+
+  auto-config-enabled-no-champion: Auto configuration enabled, but no champion has been configured
+  auto-config-enabled: 'Auto configuration enabled, configured champions: {{names}}'
+
+window-manager-main:
+  aux-window:
+    quickClose:
+      title: Don't want mini window?
+      body: You can permanently disable the mini window in the settings (Settings > Multi-window)
+
+ongoing-game-main:
+  taggedPlayer: Tagged Player
+
+in-game-send-main:
+  newTemplate: New Template {{index}}
+  exampleTemplate: |
+    // Define the metadata of the template
+    function getMetadata() {
+      return {
+        version: 10,
+        type: 'ongoing-game'
+      }
+    }
+
+    // Define the messages of the template
+    function getMessages(env) {
+      return [
+        'Message 1',
+        'Message 2',
+        'Message 3',
+        'Message 4',
+        'Message 5'
+      ]
+    }
+
+  templateTypes:
+    ongoing-game: Ongoing Game Template
+    unknown: Unknown Type
+
+  templatePresets:
+    empty: Empty Template
+    ongoing-game: Default Ongoing Game Template
+
+  sendableItemPresets:
+    plaintext: Plain Text
+    template: Template
+
+  newSendableItem: New Sendable Item {{index}}
+
+app:
+  singleton: Because Akari is unique, there can only be ONE Akari at a time
+
+common:
+  appName: League Akari
+  default: Default
+
+  yes: yes
+  no: no
+  confirm: Confirm
+  na: N/A
+
+  summonerPlaceholder: Summoner {{index}}
+  summoner: Summoner
+
+  lanes:
+    all: None
+    ALL: None
+    top: Top
+    jungle: Jungle
+    mid: Middle
+    middle: Middle
+    bot: Bottom
+    bottom: Bottom
+    support: Support
+    utility: Support
+    TOP: Top
+    JUNGLE: Jungle
+    MID: Middle
+    BOT: Bottom
+    MIDDLE: Middle
+    BOTTOM: Bottom
+    SUPPORT: Support
+    UTILITY: Support
+
+  positionAssignmentReason:
+    FILL_SECONDARY: Fill Primary
+    FILL_PRIMARY: Fill Secondary
+    PRIMARY: Primary
+    SECONDARY: Secondary
+    AUTOFILL: Autofill
+    AUTOFILL_SHORT: Fill
+
+  teams:
+    all: All
+    100: Blue Team
+    200: Red Team
+    unknown: Unknown
+    our: Our
+    their: Their
+    our-1: Our (Blue Team)
+    our-2: Our (Red Team)
+    their-1: Their (Blue Team)
+    their-2: Their (Red Team)
+
+  queueTypes:
+    RANKED_SOLO_5x5: Ranked Solo/Duo
+    RANKED_FLEX_SR: Ranked Flex
+    NORMAL: Normal SR
+    ARAM_UNRANKED_5x5: ARAM
+    CHERRY: Arena
+    URF: URF
+    RANKED_FLEX_TT: Ranked Flex TT
+    NORMAL_TFT: TFT
+    RANKED_TFT: TFT Ranked
+    RANKED_TFT_TURBO: TFT Turbo
+    RANKED_TFT_DOUBLE_UP: TFT Double Up
+
+  gameModes:
+    CLASSIC: Classic
+    ARAM: ARAM
+    URF: URF
+    TFT: TFT
+
+  sgpMatchHistoryTags:
+    all: All Modes
+    current: Current Mode
+    q_420: Ranked Solo/Duo
+    q_430: Normal SR
+    q_440: Ranked Flex
+    q_450: ARAM
+    q_480: Swiftplay
+    q_490: Quickplay
+    q_900: ARURF
+    q_1700: Arena
+    q_1900: URF
+    q_2300: Brawl
+
+  tiers:
+    UNRANKED: UNRANKED
+    IRON: IRON
+    BRONZE: BRONZE
+    SILVER: SILVER
+    GOLD: GOLD
+    PLATINUM: PLATINUM
+    EMERALD: EMERALD
+    DIAMOND: DIAMOND
+    MASTER: MASTER
+    GRANDMASTER: GRANDMASTER
+    CHALLENGER: CHALLENGER
+
+  shortTiers:
+    UNRANKED: N/A
+    IRON: IRON
+    BRONZE: BRON
+    SILVER: SILV
+    GOLD: GOLD
+    PLATINUM: PLAT
+    EMERALD: EMERD
+    DIAMOND: DIAMD
+    MASTER: MASTR
+    GRANDMASTER: GM
+    CHALLENGER: CHALL
+
+sgpServers:
+  TENCENT_HN10: Black Rose
+  TENCENT_HN1: Ionia
+  TENCENT_NJ100: League 1
+  TENCENT_GZ100: League 2
+  TENCENT_CQ100: League 3
+  TENCENT_TJ100: League 4
+  TENCENT_TJ101: League 5
+  TENCENT_BGP2: Summit
+  TENCENT_PBE: Tencent PBE
+  TW2: Taiwan
+  SG2: Singapore
+  PH2: Philippines
+  VN2: Vietnam
+  PBE: PBE
+  EUN: Europe NE
+  EUW: Europe West
+  KR: Korea
+  BR1: Brazil
+  LA1: Latin America
+  LA2: Latin America
+  OC1: Oceania
+  TR1: Turkey
+  RU: Russia
+  JP1: Japan
