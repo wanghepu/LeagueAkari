@@ -1,6 +1,6 @@
 import { AkariManager, Constructor } from '@shared/akari-shard'
 import { App, getCurrentInstance } from 'vue'
-import '@renderer-shared/assets/vconsole.min.js'
+
 import { LoggerRenderer } from './logger'
 
 declare module 'vue' {
@@ -29,8 +29,11 @@ export function createManager() {
         const logger = akariManager.getInstance('logger-renderer') as LoggerRenderer
         logger?.error('Vue', err, info)
       }
-      if (process.env.NODE_ENV !== 'production')
-      new VConsole()
+      if (process.env.NODE_ENV !== 'production') {
+        import('@renderer-shared/assets/vconsole.min.js').then(res=> {
+          new VConsole()
+        })
+      }
       window.akariManager = akariManager
     },
     setup: () => akariManager.setup(),
