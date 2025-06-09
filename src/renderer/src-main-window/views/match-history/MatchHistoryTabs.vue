@@ -20,7 +20,7 @@
         </template>
         <template v-if="lcs.summoner.me && mhs.tabs.length === 0">
           <div class="no-tab">{{ t('MatchHistoryTabs.noActiveTab') }}</div>
-          <div class="shortcut" @click="handleOpenSelfTab">
+          <div class="shortcut" @click="()=>handleOpenSelfTab()">
             <LcuImage
               class="shortcut-profile-icon"
               :src="profileIconUri(lcs.summoner.me.profileIconId)"
@@ -39,7 +39,6 @@
     </div>
     <Transition name="bi-fade">
       <div class="drop-overlay" v-if="isOverDropZone">
-        6666
         <span class="centered-hint">{{ t('MatchHistoryTabs.dropZoneRosterMember') }}</span>
       </div>
     </Transition>
